@@ -17,7 +17,7 @@
 
 (defn create-index!
   []
-  (esi/create (get-dep :db-connection)
+  (esi/create db-conn
               (env :index-name)
               :mappings {"subtitle"
                          {:properties {:show {:type "string"}
